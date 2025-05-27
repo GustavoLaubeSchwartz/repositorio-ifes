@@ -1,0 +1,170 @@
+@import './base.css';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.validation-message {
+  background-color: var(--color-primary-red);
+  color: var(--color-secondary-red);
+  margin: -16px;
+  padding: 6px;
+  width: 95%;
+  & p {
+    font-size: 14px;
+  }
+}
+
+.success-message {
+  background-color: var(--color-primary-green);
+  color: var(--color-secondary-green);
+  margin: -16px;
+  padding: 6px;
+  width: 95%;
+  & p {
+    font-size: 14px;
+  }
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.dialog-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.primary-button {
+  background-color: var(--color-base-green);
+  border: none;
+  border-radius: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 200;
+  min-height: 40px;
+  transition-duration: 0.35s;
+  width: 160px;
+}
+
+.primary-button:hover {
+  background-color: var(--color-base-green-hover);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+dialog {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid var(--color-base-gray);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 48px 0;
+  width: 100%;
+}
+@media screen and (max-width: 860px) {
+  dialog {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  dialog {
+    max-width: 320px;
+  }
+}
